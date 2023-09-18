@@ -12,7 +12,7 @@ const clipboardExtractionMessages =
         error: "an error occurred",
         default: "extract text to clipboard",
         progress: "extracting..."
-    }
+    };
 
 export default function Home()
 {

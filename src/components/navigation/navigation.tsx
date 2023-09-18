@@ -1,4 +1,4 @@
-import {Logo, LogoFake} from "@/components/logo/logo";
+import {LogoFake} from "@/components/logo/logo";
 import Link from "next/link";
 
 import {GiHamburgerMenu} from "react-icons/gi";
