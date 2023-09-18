@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=GFS+Neohellenic&family=Jost&family=Libre+Franklin&family=Mulish&family=Raleway&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root
+{
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+@layer base
+{
+    body
+    {
+        color: rgb(var(--foreground-rgb));
+        /*background: linear-gradient(*/
+        /*        to bottom,*/
+        /*        transparent,*/
+        /*        rgb(var(--background-end-rgb))*/
+        /*) rgb(var(--background-start-rgb));*/
+
+        font-family: "Raleway", sans-serif;
+
+        min-height: 100vh;
+
+        @apply bg-fixed bg-cover bg-center;
+
+        background-image: url("/henry-be-neH2O7TaRFU-unsplash.jpg");
+    }
+}
+
+@layer components
+{
+    .page-container
+    {
+        @apply container mx-auto w-full my-2 p-2 h-full overflow-scroll z-0
+    }
+
+    .page-title
+    {
+        @apply text-4xl mb-6 capitalize
+    }
+
+    .navigation-panel
+    {
+        @apply ml-auto bg-black opacity-90 p-4 sticky items-center mt-2 mx-6 gap-4 md:text-xl rounded-2xl
+    }
+
+    .navigation-panel-item
+    {
+        @apply p-1 select-none hover:text-2xl transition-all duration-500
+    }
+
+    .navigation-panel-dropdown-container
+    {
+        @apply absolute top-full p-4 rounded-xl opacity-90 -right-1/2 items-center bg-black border-white border-2 gap-2
+    }
+
+    .mobile-navigation-panel-item
+    {
+        @apply active:text-gray-600 transition-colors text-2xl m-2
+    }
+}
